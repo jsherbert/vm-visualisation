@@ -1,0 +1,62 @@
+$m-padding-default: 10px;
+
+$m-graph-padding: 70px;
+
+// Width and height would be better off relative.
+$m-graph-width: 600px;
+$m-graph-height: 400px;
+$c-graph-axis: grey;
+$c-graph-axis-grid: lightgrey;
+
+* {
+  box-sizing: border-box;
+}
+
+.Graph {
+  @extend .clearfix;
+}
+
+.Graph__container {
+  position: relative;
+  background-color: whitesmoke;
+  padding: $m-graph-padding;
+  width: $m-graph-width;
+  height: $m-graph-height;
+  float: left;
+}
+
+.Graph__body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ElementContainer {
+  display: inline-block;
+  position: relative;
+}
+
+.Graph__key {
+  position: relative;
+  width: 250px;
+  float: left;
+  padding-top: $m-graph-padding;
+}
+
+.Graph__key-item {
+  width: 100%;
+}
+
+.Graph__key-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.Graph__key-label {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}

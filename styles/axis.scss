@@ -1,0 +1,97 @@
+$m-axis-point-size: 10px;
+
+.Axis__x,
+.Axis__y {
+  position: absolute;
+  border-color: $c-graph-axis;
+  border-width: 1px;
+}
+
+.Axis__y {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: $m-graph-height - $m-graph-padding * 2;
+  border-left-style: solid;
+}
+
+.Axis__x {
+  left: 0;
+  bottom: 0;
+  width: $m-graph-width - $m-graph-padding * 2;
+  height: 0;
+  border-top-style: solid;
+}
+
+.Axis__title-x,
+.Axis__title-y {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.Axis__title-x {
+  position: absolute;
+  left: 100%;
+}
+
+.Axis__title-y {
+  position: absolute;
+  bottom: 100%;
+  // A bit of a hack to center the test, but I've run out of time!
+  left: -25px;
+  top: -25px;
+}
+
+.Axis__point-x,
+.Axis__point-y {
+  position: absolute;
+}
+
+.Axis__point-x,
+.Axis__grid-x {
+  width: 1px;
+}
+
+.Axis__point-y,
+.Axis__grid-y {
+  height: 1px;
+}
+
+.Axis__point-x {
+  height: $m-axis-point-size;
+  border-left: 1px solid $c-graph-axis;
+}
+
+.Axis__point-y {
+  left: -$m-axis-point-size;
+  width: $m-axis-point-size;
+  background-color: $c-graph-axis;
+}
+
+.Axis__grid-x,
+.Axis__grid-y {
+  position: absolute;
+  background-color: $c-graph-axis-grid;
+}
+
+.Axis__grid-x {
+  height: 100%;
+}
+
+.Axis__grid-y {
+  width: 100%;
+}
+
+.Axis__label {
+  width: 100%;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 0.6rem;
+}
+
+.Axis__figure {
+  position: absolute;
+  font-size: 0.6rem;
+  left: -30px;
+  top: -5px;
+}
